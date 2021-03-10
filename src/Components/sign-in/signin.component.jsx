@@ -24,9 +24,7 @@ class SignIn extends React.Component {
             this.setState = ({ email: '', password: '' });
         } catch (error) {
             console.log(error);
-        }
-
-        
+        } 
     };
 
     handleChange = event => {
@@ -45,7 +43,7 @@ class SignIn extends React.Component {
                     <FormInput type='password' name='password' value={this.state.password} label='Password' handleChange={this.handleChange} required />
                     <div className = 'buttons'>
                         <CustomButton type='submit'>Sign In</CustomButton>
-                        <CustomButton type='button' onClick={signInWithGoogle} isGoogleSignIn to='/shop'>
+                        <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
                             Sign In with Google
                         </CustomButton>
                     </div>
